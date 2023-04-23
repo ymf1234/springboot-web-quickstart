@@ -1,6 +1,6 @@
 package cn.yumengfei.cases.utils;
 
-import cn.yumengfei.conf.AliOSSProperties;
+import cn.yumengfei.cases.conf.AliOSSProperties;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import org.springframework.beans.factory.annotation.Autowired;

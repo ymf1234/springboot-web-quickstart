@@ -1,6 +1,7 @@
 package cn.yumengfei.cases.mapper;
 
 import cn.yumengfei.cases.pojo.Emp;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -31,4 +32,8 @@ public interface TbEmpMapper {
 
     @Select("select id, username, password, name, gender, image, job, entrydate, dept_id, create_time, update_time from tb_emp where username = #{username} and password = #{password}")
     public Emp getByUsernameAndPassword(Emp emp);
+
+    // 根据部门id删除部门下的所有员工信息
+    @Delete("delete from tb_emp where dept_id = #{id}")
+    void deleteByDeptId(Integer id);
 }

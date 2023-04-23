@@ -1,4 +1,4 @@
-package cn.yumengfei.conf;
+package cn.yumengfei.cases.conf;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
