@@ -1,6 +1,8 @@
 package cn.yumengfei.cases.service.impl;
 
 
+import cn.yumengfei.cases.aop.MyLog;
+import cn.yumengfei.cases.aop.OperateLog;
 import cn.yumengfei.cases.mapper.TbEmpMapper;
 import cn.yumengfei.cases.pojo.Emp;
 import cn.yumengfei.cases.pojo.PageBean;
@@ -70,6 +72,7 @@ public class TbEmpServiceImpl implements TbEmpService {
     }
 
     @Override
+    @MyLog
     public Emp login(Emp emp) {
         Emp loginEmp = tbEmpMapper.getByUsernameAndPassword(emp);
 

@@ -1,5 +1,6 @@
 package cn.yumengfei.cases.service.impl;
 
+import cn.yumengfei.cases.aop.OperateLog;
 import cn.yumengfei.cases.mapper.DeptMapper;
 import cn.yumengfei.cases.mapper.TbEmpMapper;
 import cn.yumengfei.cases.pojo.Dept;
@@ -31,6 +32,7 @@ public class DeptServiceImpl implements DeptService {
     private DeptLogService deptLogService;
 
     @Override
+    @OperateLog
     public List<Dept> list() {
         return deptMapper.list();
     }
